@@ -1,0 +1,14 @@
+{% extends 'app/base.html' %}
+
+{% block content2 %}
+<h2>Student List</h2>
+<ul>
+    {% for student in students  %}
+        <li>
+            {{student.first_name}} - {{student.last_name}}
+        </li>
+    {% endfor %}
+</ul>
+    
+
+{% endblock content2 %}
