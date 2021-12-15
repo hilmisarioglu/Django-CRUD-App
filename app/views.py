@@ -32,11 +32,15 @@ def student_add(request):
     return render(request, 'app/student_add.html', context)
 # ------------------------
 
-def student_detail(request):
+def student_detail(request,id):
+    student = Student.objects.get(id = id)
+    context = {
+        "student": student
+    }
+    return render(request, 'app/student_detail.html', context)
+
+def student_update(request,pk):
     pass
 
-def student_update(request):
-    pass
-
-def student_delete(request):
+def student_delete(request,pk):
     pass
