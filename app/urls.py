@@ -1,8 +1,9 @@
 from django.urls import path
-from .views import HomePage , student_list , student_add
+from .views import HomePage , student_list , student_add , student_detail
 
 urlpatterns = [
     path('', HomePage ),
     path('student_list/', student_list , name='student_list'),
     path('student_add/', student_add , name='student_add'),
+    path('<int:id>/', student_detail , name='student_detail')
 ]

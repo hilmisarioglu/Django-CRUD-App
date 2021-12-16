@@ -15,7 +15,7 @@ class Student(models.Model):
     )
     gender = models.CharField(max_length=50, choices=GENDER)
     number = models.CharField(max_length=50)
-    image = models.ImageField(upload_to="student/", default="avatar.png")
+    image = models.ImageField(upload_to="student/", default="avatar.jpg")
     
     def __str__(self):
         return self.number + " " + self.first_name

@@ -1,6 +1,25 @@
-{% extends 'app/base.html' %}
+{% extends 'app/base.html' %} 
+
 {% block content %}
-<h2>
-    <center> Wellcome Detail </center>
-</h2>
+
+<h2>Student Detail</h2>
+
+
+<div>
+    {{student.first_name}}
+</div>
+<div>
+    {{student.last_name}}
+</div>
+<div>
+    {{student.email}}
+</div>
+<div>
+    {{student.phone}}
+</div>
+<div>
+    {{student.gender}}
+</div>
+
+
 {% endblock content %}

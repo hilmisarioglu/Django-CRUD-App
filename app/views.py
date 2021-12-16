@@ -34,6 +34,7 @@ def student_add(request):
 
 def student_detail(request,id):
     student = Student.objects.get(id = id)
+    print(student)
     context = {
         "student": student
     }
