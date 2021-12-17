@@ -40,8 +40,28 @@ def student_detail(request,id):
     }
     return render(request, 'app/student_detail.html', context)
 
-def student_update(request,pk):
-    pass
+def student_update(request, id):
+    
+    student = Student.objects.get(id=id)
+    
+    form = StudentForm(instance=student)
+    
+    if request.method == "POST":
+        form = StudentForm(request.POST, instance=student)
+        if form.is_valid():
+            form.save()
+            return redirect("student_list")
+       
+    context= {
+        
+        "student":student,
+        "form":form 
+    }
+    
+    return render(request, "app/student_update.html", context)
 
-def student_delete(request,pk):
-    pass
+    
+
+def student_delete(request,id):
+    Student.objects.filter(id=id).delete()
+    return redirect('student_list')

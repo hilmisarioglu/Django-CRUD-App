@@ -1,0 +1,14 @@
+{% extends "app/base.html" %}
+{% block content %}
+<center>
+    <h1>Student Update</h1><hr>
+
+    <div style="width:300px;">
+        {% load crispy_forms_tags %}
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %} {{ form | crispy }}
+            <input type="submit" value="Update" />
+        </form>
+    </div>
+</center>
+{% endblock content%}

@@ -20,7 +20,9 @@ class Student(models.Model):
     def __str__(self):
         return self.number + " " + self.first_name
     
-    
+
+
+
     
     
     
