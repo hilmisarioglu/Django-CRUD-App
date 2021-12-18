@@ -65,3 +65,4 @@ def student_update(request, id):
 def student_delete(request,id):
     Student.objects.filter(id=id).delete()
     return redirect('student_list')
+
